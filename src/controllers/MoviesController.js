@@ -4,7 +4,7 @@ const AppError = require("../utils/AppError");
 class MoviesController {
   async create(req, res) {
     const { title, description, rating, tags } = req.body;
-    const { user_id } = req.params;
+    const user_id = req.user.id;
 
     if (!title || !description || !rating || !tags) {
       throw new AppError("Missing required information", 400);
@@ -53,7 +53,8 @@ class MoviesController {
   };
 
   async index(req, res) {
-    const { user_id, title, tags } = req.query;
+    const { title, tags } = req.query;
+    const user_id = req.user.id;
 
     let movies;
 
