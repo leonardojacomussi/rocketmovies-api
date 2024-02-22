@@ -1,2 +1,8 @@
 /node_modules
 /src/database/database.db
+tmp/**/*.png
+tmp/**/*.jpg
+tmp/**/*.jpeg
+tmp/**/*.gif
+tmp/**/*.svg
+tmp/**/*.webp
