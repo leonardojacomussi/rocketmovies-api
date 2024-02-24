@@ -21,7 +21,7 @@ class UserAvatarController {
     };
 
     const filename = await diskStorage.saveFile(avatarFilename);
-    user.avatar = filename.error;
+    user.avatar = filename.file;
 
     await knex("users")
       .where("id", user_id)
