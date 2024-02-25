@@ -6,3 +6,4 @@ tmp/**/*.jpeg
 tmp/**/*.gif
 tmp/**/*.svg
 tmp/**/*.webp
+.env
